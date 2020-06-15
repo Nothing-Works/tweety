@@ -14,7 +14,7 @@
         </div>
     </div>
     <div class="flex flex-col p-4 bg-blue-100 rounded-lg lg:w-1/6">
-        @include('_friends-list')
+        @include('_follows-list')
     </div>
 </div>
 @endsection
