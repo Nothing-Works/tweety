@@ -1,6 +1,6 @@
 <div class="flex p-4 border-b border-gray-400">
     <div class="flex-shrink-0 mr-2">
-        <img src="{{auth()->user()->avatar}}/50" alt="image" class="rounded-full">
+        <img src="{{$tweet->user->avatar}}/50" alt="image" class="rounded-full">
     </div>
 
     <div>
