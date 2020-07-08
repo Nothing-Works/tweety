@@ -1,6 +1,6 @@
 <ul>
     <li>
-        <a href="/" class="block mb-4 text-lg font-bold">
+        <a href="{{route('home')}}" class="block mb-4 text-lg font-bold">
             Home
         </a>
     </li>
@@ -30,7 +30,7 @@
         </a>
     </li>
     <li>
-        <a href="#" class="block mb-4 text-lg font-bold">
+        <a href="{{route('profile',auth()->user())}}" class="block mb-4 text-lg font-bold">
             Profile
         </a>
     </li>
