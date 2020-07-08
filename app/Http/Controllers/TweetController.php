@@ -42,7 +42,7 @@ class TweetController extends Controller
             'body' => $attributes['body'],
         ]);
 
-        return redirect('/tweets');
+        return redirect()->route('home');
     }
 
     /**

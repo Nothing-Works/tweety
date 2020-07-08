@@ -8,6 +8,7 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     use Notifiable;
+    use Followable;
 
     /**
      * The attributes that are mass assignable.
@@ -39,21 +40,6 @@ class User extends Authenticatable
     public function getAvatarAttribute()
     {
         return 'https://picsum.photos/seed/'.$this->email;
-    }
-
-    public function follows()
-    {
-        return $this->belongsToMany(User::class, 'follows', 'user_id', 'following_user_id');
-    }
-
-    public function follow(User $user)
-    {
-        return $this->follows()->save($user);
-    }
-
-    public function followers()
-    {
-        return $this->belongsToMany(User::class, 'follows', 'following_user_id', 'user_id');
     }
 
     public function tweets()
@@ -88,5 +74,10 @@ class User extends Authenticatable
             ->latest()
             ->get()
         ;
+    }
+
+    public function path()
+    {
+        return route('profile', $this);
     }
 }
