@@ -30,7 +30,7 @@
             <label class="block mb-2 text-xs font-bold text-gray-700 uppercase" for="avatar">Avatar</label>
 
             <div class="flex">
-                <input class="w-full p-2 border border-gray-400" type="file" name="avatar" id="avatar" required>
+                <input class="w-full p-2 border border-gray-400" type="file" name="avatar" id="avatar">
 
                 <img src="{{$user->avatar}}" alt="your avatar" width="40">
             </div>

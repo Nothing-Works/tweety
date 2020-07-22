@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Hash;
 
 class User extends Authenticatable
 {
@@ -39,7 +40,12 @@ class User extends Authenticatable
 
     public function getAvatarAttribute($value)
     {
-        return asset('storage/'.$value);
+        return  $value ? asset('storage/'.$value) : '/images/default-avatar.jpeg';
+    }
+
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = Hash::make($value);
     }
 
     public function tweets()
