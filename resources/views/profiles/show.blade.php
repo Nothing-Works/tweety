@@ -3,7 +3,7 @@
         <div class="relative">
             <img src="/images/default-profile-banner.jpg" alt="banner">
 
-            <img src="{{$user->avatar}}/200" alt="image"
+            <img src="{{$user->avatar}}" alt="image"
                 class="absolute bottom-0 transform -translate-x-1/2 translate-y-1/2 rounded-full" style="left: 50%;"
                 width="150">
         </div>

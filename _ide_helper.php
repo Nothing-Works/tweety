@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel, to provide autocomplete information to your IDE
- * Generated for Laravel 7.20.0 on 2020-07-20 03:52:58.
+ * Generated for Laravel 7.21.0 on 2020-07-21 23:50:13.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -869,6 +869,18 @@ namespace Illuminate\Support\Facades {
         }
         
         /**
+         * Get the current application fallback locale.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getFallbackLocale()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->getFallbackLocale();
+        }
+        
+        /**
          * Set the current application locale.
          *
          * @param string $locale
@@ -879,6 +891,19 @@ namespace Illuminate\Support\Facades {
         {
                         /** @var \Illuminate\Foundation\Application $instance */
                         $instance->setLocale($locale);
+        }
+        
+        /**
+         * Set the current application fallback locale.
+         *
+         * @param string $fallbackLocale
+         * @return void 
+         * @static 
+         */ 
+        public static function setFallbackLocale($fallbackLocale)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->setFallbackLocale($fallbackLocale);
         }
         
         /**
@@ -7371,7 +7396,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Unset the given channel instance.
          *
-         * @param string|null $name
+         * @param string|null $driver
          * @return \Illuminate\Log\LogManager 
          * @static 
          */ 
@@ -18106,6 +18131,8 @@ namespace  {
             /**
              * Remove all existing orders and optionally add a new order.
              *
+             * @param string|null $column
+             * @param string $direction
              * @return \Illuminate\Database\Query\Builder 
              * @static 
              */ 
