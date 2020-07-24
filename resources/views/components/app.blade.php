@@ -8,7 +8,7 @@
                 <div class="lg:flex-1 lg:mx-10">
                     {{$slot}}
                 </div>
-                <div class="flex flex-col p-4 bg-blue-100 rounded-lg lg:w-1/6">
+                <div class="flex flex-col p-4 bg-gray-200 border border-gray-300 rounded-lg lg:w-1/6">
                     @include('_follows-list')
                 </div>
             </div>

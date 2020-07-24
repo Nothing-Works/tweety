@@ -74,9 +74,11 @@
         </div>
 
         <div class="mb-6">
-            <button type="submit" class="px-4 py-2 text-white bg-blue-400 rounded hover:bg-blue-500">
+            <button type="submit" class="px-4 py-2 mr-4 text-white bg-blue-400 rounded hover:bg-blue-500">
                 Submit
             </button>
+
+            <a href="{{$user->path()}}" class="hover:underline">Cancel</a>
         </div>
     </form>
 </x-app>

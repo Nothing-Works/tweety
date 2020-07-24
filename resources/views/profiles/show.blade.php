@@ -9,7 +9,7 @@
         </div>
 
         <div class="flex items-center justify-between mt-2">
-            <div>
+            <div style="max-width: 270px">
                 <h2 class="text-2xl font-bold">{{$user->name}}</h2>
                 <p class="text-sm">Joined {{$user->created_at->diffForHumans()}}</p>
             </div>
@@ -29,5 +29,5 @@
             sunt
             asperiores animi nemo.</p>
     </header>
-    @include('_timeline',['tweets'=> $user->tweets()->latest()->get()])
+    @include('_timeline',['tweets'=> $tweets])
 </x-app>

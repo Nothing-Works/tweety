@@ -60,13 +60,13 @@ class User extends Authenticatable
         return Tweet::whereIn('user_id', $friends)
             ->orWhere('user_id', $this->id)
             ->latest()
-            ->get()
+            ->paginate(50)
         ;
         // or using our relationship
         return $this->tweets()
             ->orWhereIn('user_id', $friends)
             ->latest()
-            ->get()
+            ->paginate(50)
         ;
 
         // or do it all in single one query
@@ -78,7 +78,7 @@ class User extends Authenticatable
                 });
             })
             ->latest()
-            ->get()
+            ->paginate(50)
         ;
     }
 
