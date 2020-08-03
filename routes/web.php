@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::post('/tweets/{tweet}/like', 'TweetLikesController@store')->middleware('auth');
+Route::delete('/tweets/{tweet}/like', 'TweetLikesController@destroy')->middleware('auth');
 Route::get('/tweets', 'TweetController@index')->name('home');
 Route::get('/explore', 'ExploreController');
 Route::post('/tweets', 'TweetController@store');

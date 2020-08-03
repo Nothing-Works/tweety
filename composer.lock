@@ -4507,12 +4507,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-ide-helper.git",
-                "reference": "9e5c7e0887b9868b9ea309db10aaf9e2f311c697"
+                "reference": "4b459d3e828fedb0fa5455fe6d25af17130635cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/9e5c7e0887b9868b9ea309db10aaf9e2f311c697",
-                "reference": "9e5c7e0887b9868b9ea309db10aaf9e2f311c697",
+                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/4b459d3e828fedb0fa5455fe6d25af17130635cb",
+                "reference": "4b459d3e828fedb0fa5455fe6d25af17130635cb",
                 "shasum": ""
             },
             "require": {
@@ -4579,7 +4579,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-07-28T19:34:40+00:00"
+            "time": "2020-07-30T09:34:53+00:00"
         },
         {
             "name": "barryvdh/reflection-docblock",
@@ -5397,16 +5397,16 @@
         },
         {
             "name": "facade/ignition",
-            "version": "2.3.4",
+            "version": "2.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/ignition.git",
-                "reference": "87335b120bc9652e4ee2bf285b7322a785211476"
+                "reference": "58dc4a8df3d41174c677a370b6779b694e4539e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/ignition/zipball/87335b120bc9652e4ee2bf285b7322a785211476",
-                "reference": "87335b120bc9652e4ee2bf285b7322a785211476",
+                "url": "https://api.github.com/repos/facade/ignition/zipball/58dc4a8df3d41174c677a370b6779b694e4539e7",
+                "reference": "58dc4a8df3d41174c677a370b6779b694e4539e7",
                 "shasum": ""
             },
             "require": {
@@ -5465,7 +5465,7 @@
                 "laravel",
                 "page"
             ],
-            "time": "2020-07-27T15:17:39+00:00"
+            "time": "2020-08-01T21:20:01+00:00"
         },
         {
             "name": "facade/ignition-contracts",

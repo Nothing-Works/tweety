@@ -12,6 +12,29 @@
 
 namespace App{
 /**
+ * App\Like
+ *
+ * @property int $id
+ * @property int $user_id
+ * @property int $tweet_id
+ * @property int $liked
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|Like newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Like newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Like query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Like whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Like whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Like whereLiked($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Like whereTweetId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Like whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Like whereUserId($value)
+ */
+	class Like extends \Eloquent {}
+}
+
+namespace App{
+/**
  * App\Tweet
  *
  * @property int $id
@@ -19,6 +42,8 @@ namespace App{
  * @property string $body
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Like[] $likes
+ * @property-read int|null $likes_count
  * @property-read \App\User $user
  * @method static \Illuminate\Database\Eloquent\Builder|Tweet newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Tweet newQuery()
@@ -28,6 +53,7 @@ namespace App{
  * @method static \Illuminate\Database\Eloquent\Builder|Tweet whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Tweet whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Tweet whereUserId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Tweet withLikes()
  */
 	class Tweet extends \Eloquent {}
 }
@@ -50,6 +76,8 @@ namespace App{
  * @property-read int|null $followers_count
  * @property-read \Illuminate\Database\Eloquent\Collection|User[] $follows
  * @property-read int|null $follows_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Like[] $likes
+ * @property-read int|null $likes_count
  * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
  * @property-read int|null $notifications_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Tweet[] $tweets

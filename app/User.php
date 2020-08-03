@@ -53,18 +53,25 @@ class User extends Authenticatable
         return $this->hasMany(Tweet::class);
     }
 
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
+    }
+
     public function timeline()
     {
         $friends = $this->follows()->pluck('id');
 
         return Tweet::whereIn('user_id', $friends)
             ->orWhere('user_id', $this->id)
+            ->withLikes()
             ->latest()
             ->paginate(50)
         ;
         // or using our relationship
         return $this->tweets()
             ->orWhereIn('user_id', $friends)
+            ->withLikes()
             ->latest()
             ->paginate(50)
         ;
@@ -77,6 +84,7 @@ class User extends Authenticatable
                     $q->where('user_id', $this->id);
                 });
             })
+            ->withLikes()
             ->latest()
             ->paginate(50)
         ;
